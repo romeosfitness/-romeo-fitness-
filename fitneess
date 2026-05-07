@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romeos Fitness - Africa Day Boot Camp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            animation: marquee 30s linear infinite;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+        .font-script { font-family: 'Permanent Marker', cursive; }
+    </style>
+</head>
+<body class="bg-neutral-950 text-white font-sans selection:bg-yellow-500 selection:text-black">
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center grayscale"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-neutral-950 z-0"></div>
+        
+        <div class="relative z-10 max-w-4xl">
+            <div class="flex items-center justify-center gap-2 mb-6 text-yellow-500">
+                <i data-lucide="dumbbell" class="w-10 h-10 animate-pulse"></i>
+                <h2 class="text-2xl md:text-4xl font-black uppercase italic text-white">Romeos Fitness</h2>
+            </div>
+            <h1 class="text-xl md:text-3xl text-yellow-500 font-bold mb-2 uppercase tracking-widest">Kufa Kana Kufenda</h1>
+            <h2 class="text-6xl md:text-9xl font-black uppercase leading-none tracking-tighter mb-4 text-white">
+                Africa <span class="text-red-600">Day</span>
+            </h2>
+            <h3 class="text-4xl md:text-6xl font-script text-yellow-400 -mt-4 md:-mt-8 mb-8">Boot Camp</h3>
+            
+            <!-- Simple Countdown (Static for preview) -->
+            <div class="flex justify-center gap-4">
+                <div class="bg-white/10 backdrop-blur-md px-6 py-3 rounded-xl border border-white/20">
+                    <span class="text-yellow-500 block text-3xl font-bold" id="days">18</span>
+                    <span class="text-xs uppercase opacity-60">Days</span>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md px-6 py-3 rounded-xl border border-white/20">
+                    <span class="text-yellow-500 block text-3xl font-bold" id="hours">05</span>
+                    <span class="text-xs uppercase opacity-60">Hours</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="bg-yellow-500 text-black py-4 sticky top-0 z-50 shadow-2xl overflow-hidden font-black uppercase text-sm tracking-widest">
+        <div class="animate-marquee">
+            <span class="mx-4">Let's sweat, grind, and grow together! • Dress Code: Red and Black • 25 May 2026 • Rise & Shine Complex • </span>
+            <span class="mx-4">Let's sweat, grind, and grow together! • Dress Code: Red and Black • 25 May 2026 • Rise & Shine Complex • </span>
+        </div>
+    </div>
+
+    <!-- Details -->
+    <main class="max-w-7xl mx-auto px-4 py-20 space-y-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-neutral-900 p-8 rounded-3xl border border-neutral-800">
+                <i data-lucide="map-pin" class="text-red-500 mb-4"></i>
+                <h4 class="text-neutral-500 text-xs font-bold uppercase mb-2">Venue</h4>
+                <p class="font-bold text-lg">Rise & Shine Complex, Zvishavane</p>
+            </div>
+            <div class="bg-neutral-900 p-8 rounded-3xl border border-neutral-800">
+                <i data-lucide="calendar" class="text-green-500 mb-4"></i>
+                <h4 class="text-neutral-500 text-xs font-bold uppercase mb-2">Date</h4>
+                <p class="font-bold text-lg">25 May 2026</p>
+            </div>
+            <div class="bg-neutral-900 p-8 rounded-3xl border border-neutral-800">
+                <i data-lucide="clock" class="text-yellow-500 mb-4"></i>
+                <h4 class="text-neutral-500 text-xs font-bold uppercase mb-2">Time</h4>
+                <p class="font-bold text-lg">5:30 AM - 7:30 AM</p>
+            </div>
+            <div class="bg-neutral-900 p-8 rounded-3xl border border-neutral-800">
+                <i data-lucide="dollar-sign" class="text-blue-500 mb-4"></i>
+                <h4 class="text-neutral-500 text-xs font-bold uppercase mb-2">Fee</h4>
+                <p class="font-bold text-lg">$2 (Non-Members)</p>
+            </div>
+        </div>
+
+        <!-- Registration -->
+        <section id="register" class="bg-white text-black p-8 md:p-12 rounded-[2rem] max-w-2xl mx-auto shadow-2xl">
+            <h3 class="text-3xl font-black uppercase mb-2">Book Your Spot</h3>
+            <p class="text-neutral-500 mb-8">Lock in your place for the most intense workout of the year.</p>
+            <form onsubmit="alert('Registration sent! (Link your Firebase to save this)'); return false;" class="space-y-4">
+                <input type="text" placeholder="Full Name" class="w-full bg-neutral-100 p-4 rounded-xl font-bold border-none" required>
+                <input type="tel" placeholder="WhatsApp Number" class="w-full bg-neutral-100 p-4 rounded-xl font-bold border-none" required>
+                <button type="submit" class="w-full bg-black text-white py-5 rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition-transform">
+                    Register Now
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-neutral-900 py-10 text-center border-t border-neutral-800">
+        <p class="text-yellow-500 font-black mb-2">ROMEOS FITNESS ZVISHAVANE</p>
+        <p class="text-neutral-500 text-sm">Call/WhatsApp: 0779350500</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
