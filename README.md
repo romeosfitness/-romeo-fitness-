@@ -1,0 +1,1 @@
+This is a high-energy advertisement and registration website for the Romeos Fitness Africa Day Boot Camp held in Zvishavane. It features a bold design inspired by the event flyer, a countdown timer, and a registration form for participants.
